@@ -6,6 +6,7 @@ import Favorites from "../pages/Favorites";
 import About from "../pages/About";
 import PhonesDetails from "../pages/PhonesDetails";
 import ErrorPage from "../pages/ErrorPage";
+import Carts from "../components/Carts/Carts";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         {
             path:'favorites',
             Component:Favorites
+        },
+        {
+          path:'carts',
+          Component:Carts
         },
         {
             path:'about',

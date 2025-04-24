@@ -1,13 +1,11 @@
-import React from "react";
-import { Link } from "react-router";
-import { MdDeleteForever } from "react-icons/md";
-import { removeFavorites } from "../../utils";
+import React from 'react';
+import { MdDeleteForever } from 'react-icons/md';
+import { Link } from 'react-router';
 
-const PhoneCard = ({ phone, deletable, handleDelete }) => {
-  const { name, image, description, id } = phone;
-
-  return (
-    <div>
+const AddToCart = ({cart, deletable, handleRemoveToCart}) => {
+    const {name, image, description, id} = cart;
+    return (
+        <div>
       <div className="card bg-base-100 shadow-sm">
         <figure>
           <img src={image} alt="Shoes" />
@@ -31,7 +29,7 @@ const PhoneCard = ({ phone, deletable, handleDelete }) => {
           </div>
           {deletable && (
             <div
-              onClick={() => handleDelete(id)}
+              onClick={() => handleRemoveToCart(id)}
               className="bg-gray-900 p-3 ml-5 rounded-full hover:bg-gray-300 group cursor-pointer hover:scale-105 absolute -top-5 -right-5"
             >
               <MdDeleteForever
@@ -43,7 +41,7 @@ const PhoneCard = ({ phone, deletable, handleDelete }) => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default PhoneCard;
+export default AddToCart;

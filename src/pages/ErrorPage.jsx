@@ -7,7 +7,6 @@ const ErrorPage = () => {
 
     const error = useRouteError()
 
-
     return (
         <div className='md:container mx-auto'>
             <Navbar></Navbar>

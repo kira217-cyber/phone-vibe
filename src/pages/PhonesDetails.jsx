@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import Button from '../components/ui/Button';
 import { MdBookmarkAdd } from "react-icons/md";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import { addCart, addFavorite, getCart } from '../utils';
+import { addCarts, addFavorite, getCarts} from '../utils';
 import { CartContext } from '../providers/Contexts';
 import { Helmet } from 'react-helmet-async';
 const PhonesDetails = () => {
@@ -14,16 +14,17 @@ const PhonesDetails = () => {
     const {id} = useParams()
     const singlePhone = data.find(phone => phone.id === parseInt(id))
     
-    const {brand,name,model,image,price,description,storage,camera_info} = singlePhone;
+    const {brand,name,model,image,price,description,storage,camera_info} = singlePhone || {};
 
 
     const handleFavorite = ()=>{
         addFavorite(singlePhone)
     }
-    const handleCart = ()=>{
-        addCart(singlePhone)
-        setCart(getCart())
+    const handleCarts = () =>{
+        addCarts(singlePhone)
+        setCart(getCarts())
     }
+    
 
     return (
         <div className='w-full py-12'>
@@ -34,7 +35,7 @@ const PhonesDetails = () => {
             <div className='flex justify-between'>
             <h1 className='text-6xl font-thin mb-8'>{name}</h1>
             <div className='space-x-4'>
-                <Button onClick={handleCart} label={<MdShoppingCartCheckout />}></Button>
+                <Button onClick={handleCarts} label={<MdShoppingCartCheckout />}></Button>
                 <Button onClick={handleFavorite} label={<MdBookmarkAdd />}></Button>
             </div>
             </div>

@@ -28,31 +28,27 @@ export const removeFavorites = (id)=>{
     toast.success("Phone Remove Successfully")
 }
 
-export const getCart  = () =>{
-    const cart = localStorage.getItem("cart");
-    if(cart) return JSON.parse(cart)
+
+export const getCarts = () =>{
+    const carts = localStorage.getItem("carts");
+    if(carts) return JSON.parse(carts)
         return []
 }
 
+export const addCarts = cart => {
+    const carts = getCarts()
+    const isExist = carts.find(c => c.id === cart.id)
+    if(isExist) return toast.error("Cart Already Added")
 
-export const addCart = phone => {
-    
-    const cart = getCart()
+    carts.push(cart)
+    toast.success("Cart Added Successfully")
 
-    const isExist = cart.find(p => p.id === phone.id)
-    if(isExist) return toast.error("Phone Already Added")
-
-
-        cart.push(phone)
-
-        toast.success("Phone Added Successfully")
-
-    localStorage.setItem("cart",JSON.stringify(cart))
+    localStorage.setItem("carts", JSON.stringify(carts))
 }
 
-export const removeCart = (id)=>{
-    const cart = getCart()
-    const remainingCart = cart.filter(phone => phone.id !== id)
-    localStorage.setItem("cart",JSON.stringify(remainingCart))
+export const removeCarts = (id)=>{
+    const carts = getCarts();
+    const remainingCarts = carts.filter(cart => cart.id !== id)
+    localStorage.setItem("carts",JSON.stringify(remainingCarts))
     toast.success("Phone Remove Successfully")
 }

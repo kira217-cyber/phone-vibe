@@ -17,6 +17,7 @@ const Favorites = () => {
       removeFavorites(id)
       setDisplayPhones(getFavorites())
     }
+    
     if(displayPhones.length <1 ) return <EmptySate></EmptySate>
 
     return (

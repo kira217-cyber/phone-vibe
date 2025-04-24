@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { FaCartShopping } from "react-icons/fa6";
 import { MdBookmarkAdd } from "react-icons/md";
 import { CartContext } from '../../providers/Contexts';
+import { getCarts } from '../../utils';
 
 const Navbar = () => {
 
   const {cart} = useContext(CartContext)
-  console.log(cart)
+
 
     return (
         <div>
@@ -27,7 +28,7 @@ const Navbar = () => {
         <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/about'>About</NavLink>
         </li>
         <li >
-        <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/cart'><FaCartShopping size={20} /></NavLink>
+        <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/carts'><FaCartShopping size={20} /></NavLink>
     </li>
     <li>
         <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/favorites'><MdBookmarkAdd size={20} /></NavLink>
@@ -45,7 +46,7 @@ const Navbar = () => {
         <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/about'>About</NavLink>
         </li>
         <li className='relative'>
-        <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/cart'><FaCartShopping size={20} /><p>{cart.length}</p></NavLink>
+        <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/carts'><FaCartShopping size={20} /><p>{cart.length}</p></NavLink>
     </li>
     <li>
         <NavLink className={({isActive})=>(isActive ? 'text-indigo-700' : "")} to='/favorites'><MdBookmarkAdd size={20} /></NavLink>
