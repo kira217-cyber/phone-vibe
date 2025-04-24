@@ -31,7 +31,7 @@ const Carts = () => {
   if(displayCarts.length < 1 ) return <EmptySate></EmptySate>
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 p-6 mb-10">
       <Helmet>
         <title>Carts</title>
       </Helmet>

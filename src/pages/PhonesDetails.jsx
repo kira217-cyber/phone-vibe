@@ -27,21 +27,28 @@ const PhonesDetails = () => {
     
 
     return (
-        <div className='w-full py-12'>
+        <div className='w-full py-9 px-5 text-center'>
             <Helmet>
                 <title>Phones-Details-{id}</title>
             </Helmet>
             <img className='w-full mx-auto md:w-auto mb-9' src={image} alt="" />
             <div className='flex justify-between'>
-            <h1 className='text-6xl font-thin mb-8'>{name}</h1>
-            <div className='space-x-4'>
+            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold mb-6 p-2 text-start'>{name}</h1>
+            <div className='text-center space-y-2 md:space-x-2'>
                 <Button onClick={handleCarts} label={<MdShoppingCartCheckout />}></Button>
                 <Button onClick={handleFavorite} label={<MdBookmarkAdd />}></Button>
             </div>
             </div>
             {/* Details */}
 
-            <div>
+            <div className='text-start space-y-7'>
+                <h1 className='text-5xl'>Details:</h1>
+                <p className='font-bold text-xl'>Brand: <span className='font-normal'>{brand}</span></p>
+                <p className='font-bold text-xl'>Model: <span className='font-normal'>{model}</span></p>
+                <p className='font-bold text-xl'>Storage: <span className='font-normal'>{storage[0]},{storage[1]}</span></p>
+                <p className='font-bold text-xl'>Price: <span className='font-normal'>{price}</span></p>
+                <p className='font-bold text-xl'>Camera Info: <span className='font-normal'>{camera_info}</span></p>
+                <p className='font-bold text-xl'>Description: <span className='font-normal'>{description}</span></p>
 
             </div>
 

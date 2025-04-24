@@ -17,12 +17,12 @@ const Favorites = () => {
       removeFavorites(id)
       setDisplayPhones(getFavorites())
     }
-    
+
     if(displayPhones.length <1 ) return <EmptySate></EmptySate>
 
     return (
 
-        <div className="mt-12">
+        <div className="mt-12 p-6 mb-12">
           <Helmet>
             <title>Favorites</title>
           </Helmet>
