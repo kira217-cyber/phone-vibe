@@ -1,12 +1,49 @@
-# React + Vite
+# 📱 Phone Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, modern **React** web application showcasing smartphone products. Users can browse through device options, view detailed information, and enjoy a clean, interactive UI.
 
-Currently, two official plugins are available:
+![Screenshot: Phone Vibe homepage](https://i.ibb.co/DFBDPF4/Screenshot-2025-06-29-052943.png)  <!-- Add your own screenshot in this path -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌟 Project Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Phone Vibe is a product showcase platform built with React, Tailwind CSS, and React Router. Designed with mobile-first responsiveness in mind, the app highlights phone devices with smooth navigation, dynamic product pages, and aesthetically pleasing UI.
+
+### 🔍 Key Features
+
+- 📱 **Responsive Design** – Seamlessly adapts to mobile, tablet, and desktop.
+- 🔄 **React Router** – Navigate between homepage and detailed product pages.
+- 🎯 **Live Product Previews** – Users can click on a phone to view its details.
+- 🧩 **Clean Components** – Modular, maintainable code structure.
+- 🎨 **Tailwind CSS** – Utility-first styling for fast and consistent design.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology         | Purpose                            |
+|--------------------|-------------------------------------|
+| React              | UI components & state management    |
+| React Router       | Navigation between pages           |
+| Tailwind CSS       | Styling and utility classes         |
+| DaisyUI (optional) | Pre-built styled components         |
+| Vercel / Netlify   | Deployment platform                 |
+
+---
+
+## 🚀 Live Demo
+
+Explore the live site:  
+🔗 [https://phone-vibe.netlify.app/](https://phone-vibe.netlify.app/)
+
+---
+
+## 🧭 How to Run Locally
+
+```bash
+git clone https://github.com/kira217-cyber/phone-vibe
+cd phone-vibe
+npm install
+npm start
+
