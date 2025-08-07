@@ -1,5 +1,7 @@
 # 📱 Phone Vibe
 
+🔗 [Live Demo](https://phone-vibe.netlify.app/)
+
 A responsive, modern **React** web application showcasing smartphone products. Users can browse through device options, view detailed information, and enjoy a clean, interactive UI.
 
 ![Screenshot: Phone Vibe homepage](https://i.ibb.co/DFBDPF4/Screenshot-2025-06-29-052943.png)  <!-- Add your own screenshot in this path -->
@@ -31,11 +33,6 @@ Phone Vibe is a product showcase platform built with React, Tailwind CSS, and Re
 | Vercel / Netlify   | Deployment platform                 |
 
 ---
-
-## 🚀 Live Demo
-
-Explore the live site:  
-🔗 [https://phone-vibe.netlify.app/](https://phone-vibe.netlify.app/)
 
 ---
 
